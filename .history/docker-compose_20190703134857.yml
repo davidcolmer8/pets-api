@@ -1,0 +1,11 @@
+version: '2'
+services: 
+  web:
+    build: .
+    ports: 
+      - "80:5000"
+    volumes: 
+      - /tmp/pets-api:/tmp/pets-api 
+    links: 
+      - db:mongodb
+    con
